@@ -20,6 +20,12 @@ router.route("/register").post(
      
     );
     router.route("/logout").post(verifyJwt ,logoutUser)
+    // logout logic will go here
+    // This will clear the refresh token from the user's cookies
+    router.route("/refresh-token").post(refreshAccessToken)
+    // refresh token logic will go here)
+
+
 
 
 export default router;
